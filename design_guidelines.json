@@ -1,0 +1,276 @@
+{
+  "theme": "dark_primary_with_light_toggle",
+  "archetype": "ARCHETYPE 4: SWISS & HIGH-CONTRAST + ARCHETYPE 2: THE PERFORMANCE PRO (High-Focus Academic Command Center)",
+  "design_direction": "Modern, sleek Dark-themed EdTech LMS with high-clarity typography, tactical live-exam HUD, fluid animated step-by-step tutorial viewer, split-pane PDF homework submission & grading desk, live presence indicators, and interactive real-time chat workspace.",
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#0B0F19",
+        "on_bg": "#F8FAFC",
+        "on_bg_muted": "#94A3B8"
+      },
+      {
+        "name": "panel",
+        "kind": "solid",
+        "bg": "#111827",
+        "on_bg": "#F9FAFB",
+        "on_bg_muted": "#9CA3AF"
+      },
+      {
+        "name": "panel_elevated",
+        "kind": "solid",
+        "bg": "#1E293B",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#CBD5E1"
+      },
+      {
+        "name": "inverse",
+        "kind": "solid",
+        "bg": "#F8FAFC",
+        "on_bg": "#0B0F19",
+        "on_bg_muted": "#475569"
+      },
+      {
+        "name": "hero",
+        "kind": "gradient",
+        "contrast_against": "#0D1527",
+        "guarantee": "scrim: linear-gradient(135deg, rgba(11,15,25,0.95) 0%, rgba(15,23,42,0.85) 100%)",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "link": "#38BDF8",
+          "error": "#F87171",
+          "success": "#34D399"
+        }
+      },
+      {
+        "name": "exam_hud_active",
+        "kind": "solid",
+        "bg": "#050914",
+        "on_bg": "#F8FAFC",
+        "on_bg_muted": "#94A3B8"
+      },
+      {
+        "name": "chat_bubble_incoming",
+        "kind": "solid",
+        "bg": "#1F2937",
+        "on_bg": "#F3F4F6",
+        "on_bg_muted": "#9CA3AF"
+      },
+      {
+        "name": "chat_bubble_outgoing",
+        "kind": "solid",
+        "bg": "#2563EB",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#BFDBFE"
+      },
+      {
+        "name": "status_badge_active",
+        "kind": "solid",
+        "bg": "#064E3B",
+        "on_bg": "#34D399",
+        "on_bg_muted": "#6EE7B7"
+      },
+      {
+        "name": "status_badge_timer_urgent",
+        "kind": "solid",
+        "bg": "#7F1D1D",
+        "on_bg": "#FCA5A5",
+        "on_bg_muted": "#F87171"
+      }
+    ],
+    "accent": "#3B82F6",
+    "on_accent": "#FFFFFF",
+    "accent_secondary": "#10B981",
+    "on_accent_secondary": "#FFFFFF",
+    "warning": "#F59E0B",
+    "danger": "#EF4444"
+  },
+  "typography": {
+    "font_heading": "'Space Grotesk Variable', -apple-system, BlinkMacSystemFont, sans-serif",
+    "font_body": "'DM Sans Variable', -apple-system, BlinkMacSystemFont, sans-serif",
+    "font_mono": "'JetBrains Mono Variable', monospace",
+    "scale_px": {
+      "display": 56,
+      "h1": 42,
+      "h2": 32,
+      "h3": 24,
+      "h4": 18,
+      "body": 16,
+      "caption": 14
+    },
+    "rules": {
+      "headings": "font-heading font-bold tracking-tight text-slate-100",
+      "body": "font-body text-base text-slate-300 leading-relaxed",
+      "labels": "font-mono uppercase text-xs tracking-wider text-slate-400 font-medium",
+      "timer_display": "font-mono font-bold tracking-widest text-emerald-400"
+    }
+  },
+  "entry_surfaces": {
+    "/": "split hero — brand value & quick demo credentials left, live animated curriculum cards & live exam radar right",
+    "/login": "branded split login — LMS platform highlights & quick demo switcher left, role-based auth form right",
+    "/register": "branded split register — student/teacher feature preview left, multi-step signup card right"
+  },
+  "grids_and_layouts": {
+    "dashboard_mode": "High Density Bento Grid (Mode B) with collapsible sidebar navigation, top command bar with session pulse, quick actions and multi-tab resource views.",
+    "mobile_first": "Full responsive drawer sidebar on screens <1024px, bottom sticky toolbar for live exam timer and chat actions, optimized touch targets (min 44px).",
+    "exam_screen_layout": "Full-focus split view — Fixed top HUD (live clock, server sync indicator, question progress map) + center question card + right-hand question matrix navigator (mobile: bottom drawer sheet).",
+    "homework_desk_layout": "Split workspace: Left 50% interactive PDF document previewer / submission uploader, Right 50% rubric, grading form, rubric sliders, teacher feedback log, and student response history.",
+    "chat_layout": "Three-column modular messenger: Channel/DM sidebar (with live online presence dots) + Active thread pane + Thread details & shared attachments drawer."
+  },
+  "motion": {
+    "preferred_engine": "motion/react",
+    "transitions": {
+      "hover": "transition-colors duration-150 ease-out",
+      "card_lift": "transition-transform duration-200 ease-out hover:-translate-y-0.5",
+      "timer_pulse": "animate-pulse duration-1000",
+      "step_tutorial": "motion.div layout transition with smooth slide-in opacity fade (duration 0.3s)"
+    },
+    "accessibility": "Respect prefers-reduced-motion; instant state toggling fallback when user prefers reduced motion."
+  },
+  "accessibility": {
+    "target_contrast": "WCAG AA (4.5:1 minimum on all text, 3:1 on large HUD displays)",
+    "focus_rings": "focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900",
+    "data_testids": "Strict role-based kebab-case testids required on all buttons, forms, timers, and submission handlers."
+  },
+  "image_urls": [
+    {
+      "category": "hero_students",
+      "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxzdHVkZW50cyUyMGxlYXJuaW5nJTIwb25saW5lfGVufDB8fHx8MTc5MDgxODY1N3ww&ixlib=rb-4.1.0&q=85",
+      "alt": "University students collaborating with laptops on platform",
+      "placement": "Landing page hero & student dashboard banner"
+    },
+    {
+      "category": "teacher_classroom",
+      "url": "https://images.unsplash.com/photo-1511629091441-ee46146481b6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwzfHx0ZWFjaGVyJTIwY2xhc3Nyb29tJTIwdHV0b3J8ZW58MHx8fHwxNzkwODE4NjU3fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Teacher explaining complex STEM equations in classroom",
+      "placement": "Teacher evaluation portal and course creator banner"
+    },
+    {
+      "category": "student_focus",
+      "url": "https://images.unsplash.com/photo-1610484826967-09c5720778c7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGxlYXJuaW5nJTIwb25saW5lfGVufDB8fHx8MTc5MDgxODY1N3ww&ixlib=rb-4.1.0&q=85",
+      "alt": "Student taking online exam with headphones",
+      "placement": "Live Exam preparation & tutorial module preview"
+    },
+    {
+      "category": "collaborative_study",
+      "url": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwzfHxzdHVkZW50cyUyMGxlYXJuaW5nJTIwb25saW5lfGVufDB8fHx8MTc5MDgxODY1N3ww&ixlib=rb-4.1.0&q=85",
+      "alt": "Digital teamwork studying interactive tutorials",
+      "placement": "Animated interactive tutorial showcase"
+    }
+  ],
+  "component_specs": {
+    "live_exam_room": {
+      "name": "LiveExamRoom",
+      "features": [
+        "Synchronized server-time countdown clock (auto-submits when remaining time = 0)",
+        "Lockout enforcement: exam unlocks strictly at scheduled start timestamp",
+        "MCQ single-choice and multi-choice responsive selector",
+        "Question quick-jump matrix (answered / flagged / unanswered counters)",
+        "Anti-tamper full-screen focus guard warning indicator",
+        "Auto-grading report modal upon completion"
+      ],
+      "data_testids": {
+        "timer": "exam-countdown-timer",
+        "question_card": "exam-question-item",
+        "option_radio": "exam-option-radio",
+        "flag_button": "exam-flag-question-btn",
+        "submit_button": "exam-submit-all-btn",
+        "matrix_button": "exam-question-nav-btn"
+      }
+    },
+    "animated_tutorial_player": {
+      "name": "AnimatedTutorialPlayer",
+      "features": [
+        "In-app dynamic interactive step-by-step canvas/motion viewer (e.g., Algorithm visualization, Math graphs, Physics trajectory)",
+        "Embedded video lecture player (supports YouTube embeds + animated slides)",
+        "Play/Pause/Step-forward/Step-backward interactive controls",
+        "Step progress timeline with completion markers and bookmarking"
+      ],
+      "data_testids": {
+        "step_forward": "tutorial-step-forward-btn",
+        "step_backward": "tutorial-step-backward-btn",
+        "play_toggle": "tutorial-play-toggle-btn",
+        "canvas_container": "tutorial-animation-canvas"
+      }
+    },
+    "homework_submission_and_grading": {
+      "name": "HomeworkDesk",
+      "features": [
+        "Student PDF file uploader with drag-and-drop & in-browser previewer",
+        "Teacher grading panel with score slider, rubric badges, and rich feedback comments",
+        "Status badges: Pending Submission, Submitted, Under Review, Graded",
+        "Subscription gate barrier with mock Stripe test-mode upgrade modal"
+      ],
+      "data_testids": {
+        "pdf_upload_input": "homework-pdf-file-input",
+        "submit_homework_btn": "homework-submit-btn",
+        "grade_input": "teacher-grade-score-input",
+        "feedback_textarea": "teacher-feedback-textarea",
+        "save_grade_btn": "teacher-save-grade-btn"
+      }
+    },
+    "chat_workspace": {
+      "name": "ChatWorkspace",
+      "features": [
+        "1:1 Direct messages between student and teacher",
+        "Group course cohort discussion channels",
+        "Real-time polling engine with typing indicator simulation",
+        "Unread badge count and file attachment preview"
+      ],
+      "data_testids": {
+        "channel_tab": "chat-channel-item",
+        "message_input": "chat-message-input",
+        "send_btn": "chat-send-message-btn",
+        "message_bubble": "chat-message-bubble"
+      }
+    },
+    "admin_active_users_radar": {
+      "name": "AdminActiveUsersRadar",
+      "features": [
+        "Live active user heartbeat dashboard with online status indicator",
+        "Role breakdown (Student / Teacher / Admin counts)",
+        "Subscription tier manager (Free vs Pro/Active Subscriber status)",
+        "Real-time session table with IP/device badge and last-ping counter"
+      ],
+      "data_testids": {
+        "active_users_table": "admin-active-users-table",
+        "user_row": "admin-user-row",
+        "subscription_badge": "admin-user-sub-badge",
+        "ping_indicator": "admin-user-online-ping"
+      }
+    },
+    "subscription_modal": {
+      "name": "SubscriptionPaywallModal",
+      "features": [
+        "Pricing tiers for Student ($9/mo) and Teacher Pro ($29/mo) or INR ₹799 / ₹2,499 equivalent",
+        "Stripe test card autofill button (e.g. 4242 4242...)",
+        "Feature unlock breakdown (unlimited live exams, PDF grading desk, priority 1:1 chat)",
+        "Instant mock checkout success handler with active badge update"
+      ],
+      "data_testids": {
+        "subscribe_btn": "subscription-checkout-btn",
+        "tier_card": "subscription-tier-card",
+        "mock_pay_btn": "subscription-mock-pay-btn"
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Template is farm-ts (FastAPI backend at /app/backend, Vite React 19 frontend at /app/frontend).",
+    "Configure dark mode styling in frontend/src/index.css with @import '@fontsource-variable/space-grotesk' and @import '@fontsource-variable/dm-sans' for crisp, premium dark EdTech aesthetics.",
+    "Implement seed data with pre-populated accounts (Student, Teacher, Admin), existing homework assignments with uploaded sample PDF links, scheduled live exams (one starting in 2 minutes for testing countdown, one ongoing, one past), interactive step tutorials, and active chat channels.",
+    "Ensure the live exam countdown is synchronized with server time and auto-submits on timer expiration.",
+    "Ensure homework evaluation lets teachers view the student's submission PDF, enter numeric grade (0-100) + feedback text, and updates the student's gradebook view instantly.",
+    "In the Admin dashboard, include a live heartbeat mechanism (client pings /api/auth/heartbeat every 15s) so the active users table accurately displays who is currently online.",
+    "Include subscription gating: when an unsubscribed student tries to take an exam or submit homework, or unsubscribed teacher grades homework, display the SubscriptionPaywallModal with Stripe test checkout simulation.",
+    "Add explicit data-testid attributes to all interactive buttons, inputs, links, and status labels."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": {
+    "spacing": "Use generous Tailwind spacing (p-4, p-6, p-8) and keep container paddings intact.",
+    "no_universal_transition": "Never use transition: all. Use specific transition-colors or transition-transform.",
+    "no_raw_emojis_for_icons": "Use lucide-react icons for all UI elements (e.g., BookOpen, Clock, FileText, CheckCircle2, MessageSquare, ShieldAlert, Users, Award).",
+    "toasts": "Use sonner toast for notification feedback on homework submit, grade save, exam start, and chat messages."
+  }
+}
